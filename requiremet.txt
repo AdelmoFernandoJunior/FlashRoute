@@ -1,1 +1,7 @@
-sqlalchemy 
+fastapi
+uvicorn
+sqlalchemy
+alembic
+passlib
+bcrypt==3.2.2
+python-dotenv
