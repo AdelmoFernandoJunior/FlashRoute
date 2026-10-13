@@ -8,5 +8,3 @@ async def pedidos():
     Rota padrão de pedidos do nosso sistema.
     """
     return {"message": "Você está na rota de pedidos!"}
-
-
