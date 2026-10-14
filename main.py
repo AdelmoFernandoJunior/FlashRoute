@@ -19,7 +19,7 @@ app.include_router(order_router, prefix="/orders", tags=["orders"])
 
 
 
-
+# & ".\.venv\Scripts\python.exe" -m uvicorn main:app --reload
 
 
 
