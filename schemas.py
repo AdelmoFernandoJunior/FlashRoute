@@ -13,12 +13,14 @@ class UsuarioSchema(BaseModel):
     class Config:
         from_attributes = True
 
+# Essa classe serve para validação de dados de entrada para pedidos
 class PedidoSchema(BaseModel):
     usuario: int
 
     class Config:
         from_attributes = True
 
+# Essa classe serve para validação de dados de entrada para login
 class LoginSchema(BaseModel):
     email: EmailStr
     senha: str

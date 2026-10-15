@@ -6,6 +6,9 @@ import os
 load_dotenv()
 
 SECRET_KEY = os.getenv("SECRET_KEY")
+ALGORITHM = os.getenv("ALGORITHM")
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES"))
+
 
 app = FastAPI()
 
@@ -19,7 +22,7 @@ app.include_router(order_router, prefix="/orders", tags=["orders"])
 
 
 
-# & ".\.venv\Scripts\python.exe" -m uvicorn main:app --reload
+# ./.venv/Scripts/python.exe -m uvicorn main:app --reload
 
 
 
@@ -29,3 +32,9 @@ app.include_router(order_router, prefix="/orders", tags=["orders"])
 # Put -> atualizar
 # Patch -> atualizar parcialmente
 # Delete -> deletar
+
+# GET	    Consultar dados	                            GET /simulacoes/123
+# POST	    Criar um recurso ou iniciar uma operação	POST /simulacoes
+# PUT	    Substituir integralmente um recurso     	PUT /simulacoes/123
+# PATCH	    Atualizar parcialmente um recurso	        PATCH /simulacoes/123
+# DELETE	Excluir um recurso	                        DELETE /simulacoes/123
